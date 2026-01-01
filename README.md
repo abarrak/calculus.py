@@ -13,6 +13,11 @@ A comprehensive Python toolkit for learning and visualizing single-variable calc
 - **Interactive Games**: Practice exercises with instant feedback
 - **Custom Explorer**: Analyze user-defined functions
 
+<img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/1.png" width="70%">
+<img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/2.png" width="70%">
+<img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/3.png" width="70%">
+
+
 ## 🚀 Quick Start
 
 ```bash
@@ -68,6 +73,8 @@ test/
 ```bash
 python -m pytest test/ -v
 ```
+
+<img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/test-suite.png" width="70%">
 
 ## 🎓 Educational Use
 
