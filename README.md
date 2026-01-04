@@ -83,7 +83,3 @@ python -m pytest test/ -v
 ## 📄 License
 
 MIT License.
-
----
-
-*Built with Claude Sonnet 4, Designed to make abstract calculus concepts tangible and understandable.*
