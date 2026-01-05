@@ -502,3 +502,45 @@ class CommonIntegralsCore:
             'solution': solution,
             'problem_text': f"Find ∫({function}) dx"
         }
+
+    def calculate_improper_integral(self, func_str: str, interval: Tuple[Optional[float], Optional[float]]) -> Dict:
+        '''Calculate improper integrals.'''
+        try:
+            func_expr = sp.sympify(func_str)
+            x = sp.Symbol('x')
+            a, b = interval
+
+            # Type 1 improper integrals - infinite limits
+            if a is None:  # (-∞, b]
+                limit_result = sp.integrate(func_expr, (x, -sp.oo, b))
+            elif b is None:  # [a, ∞)
+                limit_result = sp.integrate(func_expr, (x, a, sp.oo))
+            elif a is None and b is None:  # (-∞, ∞)
+                limit_result = sp.integrate(func_expr, (x, -sp.oo, sp.oo))
+            else:  # Regular definite integral
+                limit_result = sp.integrate(func_expr, (x, a, b))
+
+            # Check if the integral converges
+            converges = limit_result.is_finite if limit_result is not None else False
+
+            # Numerical approximation for finite bounds
+            numerical_result = None
+            if converges and a is not None and b is not None:
+                try:
+                    func_lambda = sp.lambdify(x, func_expr, 'numpy')
+                    numerical_result, _ = integrate.quad(func_lambda, a, b)
+                except:
+                    numerical_result = None
+
+            return {
+                'function': func_str,
+                'interval': interval,
+                'symbolic_result': limit_result,
+                'numerical_result': numerical_result,
+                'converges': converges,
+                'convergence_value': float(limit_result) if limit_result.is_real and limit_result.is_finite else None
+            }
+
+        except Exception as e:
+            print(f"Error calculating improper integral: {e}")
+            return None

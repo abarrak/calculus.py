@@ -1,10 +1,8 @@
 # Calculus.py
 
-## 🧮 Calculus Learning & Visualization Toolkit
+A comprehensive Python toolkit for learning and visualizing single-variable calculus concepts through interactive demonstrations.
 
-A comprehensive Python toolkit for learning and visualizing single-variable calculus concepts through interactive demonstrations and visualizations.
-
-## ✨ Features
+## Features
 
 - **Basic Rules**: Power, Product, Chain, and Quotient rule demonstrations
 - **Fundamental Theorem**: FTC Parts 1 & 2 with Riemann sum visualizations
@@ -16,7 +14,7 @@ A comprehensive Python toolkit for learning and visualizing single-variable calc
 <img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/1.png" width="40%"><img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/2.png" width="40%">
 
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone and install
@@ -28,14 +26,14 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-## 📦 Dependencies
+## Dependencies
 
 - **NumPy** - Numerical computations
 - **Matplotlib** - Visualizations and plotting
 - **SymPy** - Symbolic mathematics
 - **SciPy** - Scientific computing
 
-## 💻 Usage
+## Usage
 
 ```python
 from src.basic_rules_viz import CalculusRules
@@ -49,7 +47,7 @@ derivatives = CommonDerivatives()
 derivatives.demonstrate_derivative_patterns()
 ```
 
-## 📁 Architecture
+## Architecture
 
 ```
 src/
@@ -66,7 +64,7 @@ test/
 - `derivatives_*` - Comprehensive derivatives library
 - `integrals_*` - Advanced integration techniques
 
-## 🧪 Testing
+## Testing
 
 ```bash
 python -m pytest test/ -v
@@ -74,12 +72,12 @@ python -m pytest test/ -v
 
 <img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/test-suite.png" width="70%">
 
-## 🎓 Educational Use
+## Educational Use
 
 - **Students**: Visual learning with step-by-step demonstrations
 - **Educators**: Lecture support and assignment generation
 - **Coverage**: Calculus I/II, AP Calculus, University-level concepts
 
-## 📄 License
+## License
 
 MIT License.
