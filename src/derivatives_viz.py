@@ -340,8 +340,8 @@ def derivative_game():
         print(f"\nFunction {i+1}: f(x) = {func_str}")
 
         try:
-            func = visualizer.core.core.sympify(func_str)
-            derivative = visualizer.core.core.diff(func, visualizer.core.x)
+            func = sp.sympify(func_str)
+            derivative = sp.diff(func, visualizer.core.x)
 
             input("Press Enter to see the derivative...")
             print(f"Answer: f'(x) = {derivative}")
