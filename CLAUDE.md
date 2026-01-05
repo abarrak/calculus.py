@@ -183,7 +183,7 @@ def integral_formulas(self):
 ### Test Patterns
 ```python
 def test_power_rule_demo(self):
-    """Test power rule demonstration."""
+    '''Test power rule demonstration.'''
     try:
         self.rules.power_rule_demo(2, (-2, 2))
         self.assertTrue(True, "Demo executed successfully")
@@ -202,6 +202,7 @@ def test_power_rule_demo(self):
 
 ### 2. Code Style
 - 2-space indentation for Python files
+- single quote for docstring and files
 - Descriptive function/variable names
 - Comprehensive docstrings with examples
 - Type hints for function parameters
@@ -209,7 +210,7 @@ def test_power_rule_demo(self):
 ### 3. Documentation Headers
 All files should include standardized headers:
 ```python
-"""
+'''
 Module Name
 -----------
 
@@ -218,7 +219,7 @@ Brief description of module purpose and functionality.
 @file: filename.py
 @authors: Claude Sonnet 4, Abdullah Barrak.
 @date: 1/1/2026
-"""
+'''
 ```
 
 ## Common Debugging Scenarios
@@ -271,9 +272,3 @@ matplotlib.use('Agg')  # Non-interactive backend for testing
 - Progressive difficulty levels
 - Assessment and feedback mechanisms
 - Export capabilities for academic use
-
-## Contact & Contribution
-
-This toolkit was developed as an educational resource combining rigorous mathematical computation with intuitive visual demonstrations. The modular architecture enables easy extension and customization for specific educational needs.
-
-For questions about implementation details or enhancement requests, refer to the comprehensive test suite and core module documentation.
