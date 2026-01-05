@@ -10,11 +10,10 @@
 ' @date: 1/1/2026
 '''
 
-import sys
 import matplotlib.pyplot as plt
 
 # Import the refactored modules with separated visualization
-from basic_rules_viz import CalculusRules, interactive_limit_demo
+from basic_rules_viz import CalculusRules
 from fundamental_theorem_viz import FundamentalTheorem, interactive_fundamental_theorem_explorer
 from derivatives_viz import CommonDerivatives, derivative_game
 from integrals_viz import CommonIntegralsVisualizer, integral_practice_game
@@ -102,7 +101,7 @@ class CalculusToolkit:
 
             elif choice == 5:
                 print("\n📏 Limits and Continuity")
-                interactive_limit_demo()
+                self.rules.interactive_limit_demo()
 
             elif choice == 6:
                 print("\n🔄 Riemann Sums & Area Approximation")
