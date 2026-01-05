@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "calculus.py"
+name = "calculus-learn-kit"
 version = "1.0.1"
 authors = [
   {name = "Abdullah Barrak", email = "abdullah@example.com"},

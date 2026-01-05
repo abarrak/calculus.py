@@ -16,6 +16,15 @@ A comprehensive Python toolkit for learning and visualizing single-variable calc
 ## 🚀 Quick Start
 
 ```bash
+pip install calculus-learn-kit
+
+# Run it.
+calculus
+```
+
+Or build from the source:
+
+```bash
 # Clone and install
 git clone https://github.com/aalotai1/calculus.py.git
 cd calculus.py
