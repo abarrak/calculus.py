@@ -23,7 +23,7 @@ from .integrals_viz import CommonIntegralsVisualizer, integral_practice_game
 from .fundamental_theorem_viz import FundamentalTheorem, interactive_fundamental_theorem_explorer
 from .main import CalculusToolkit
 
-# Define what gets imported with "from calculus_py import *"
+# Define what gets imported with "from src import *"
 __all__ = [
   'CalculusToolkit',
   'CalculusRules',

@@ -43,7 +43,6 @@ dev = [
   "pytest>=6.0",
   "pytest-mock",
   "autopep8",
-  "black",
   "flake8"
 ]
 jupyter = [
@@ -59,15 +58,20 @@ jupyter = [
 "Documentation" = "https://github.com/abarrak/calculus.py#readme"
 
 [project.scripts]
-calculus = "calculus_py.main:main"
+calculus = "src.main:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["calculus_py*"]
+include = ["src*"]
 
-[tool.black]
-line-length = 88
-target-version = ['py38']
+[tool.flake8]
+max-line-length = 88
+indent-size = 2
+hang-closing = true
+ignore = ["E111", "E114", "E116", "E121", "E126", "E127", "E128", "W503"]
+per-file-ignores = [
+  "__init__.py:F401"
+]
 
 [tool.pytest.ini_options]
 testpaths = ["test"]
