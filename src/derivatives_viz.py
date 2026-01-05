@@ -20,25 +20,25 @@ from derivatives_core import CommonDerivativesCore, get_function_families, forma
 
 
 class CommonDerivativesVisualizer:
-    """Handles all visualizations for common derivatives."""
+    '''Handles all visualizations for common derivatives.'''
 
     def __init__(self):
         self.core = CommonDerivativesCore()
 
     def display_derivative_table(self) -> None:
-        """Display a formatted table of common derivatives."""
+        '''Display a formatted table of common derivatives.'''
         print(format_derivative_table())
 
     def visualize_function_and_derivative(self, func_str: str, x_range: Tuple[float, float] = (-3, 3),
                                         title: str = None) -> None:
-        """
+        '''
         Visualize a function and its derivative side by side.
 
         Args:
             func_str: Function as string (SymPy format)
             x_range: Range for x values
             title: Optional title for the plot
-        """
+        '''
         x_vals = np.linspace(x_range[0], x_range[1], 1000)
 
         try:
@@ -72,7 +72,7 @@ class CommonDerivativesVisualizer:
             print(f"Error plotting function {func_str}: {e}")
 
     def demonstrate_derivative_patterns(self) -> None:
-        """Demonstrate common derivative patterns with visualizations."""
+        '''Demonstrate common derivative patterns with visualizations.'''
         patterns = self.core.get_derivative_patterns()
 
         for pattern_name, functions in patterns.items():
@@ -117,14 +117,14 @@ class CommonDerivativesVisualizer:
 
     def slope_field_visualization(self, func_str: str, x_range: Tuple[float, float] = (-3, 3),
                                 y_range: Tuple[float, float] = (-3, 3)) -> None:
-        """
+        '''
         Create a slope field visualization for a derivative.
 
         Args:
             func_str: Function whose derivative defines the slope field
             x_range: Range for x values
             y_range: Range for y values
-        """
+        '''
         data = self.core.calculate_slope_field_data(func_str, x_range, y_range)
 
         if not data['calculation_success']:
@@ -154,7 +154,7 @@ class CommonDerivativesVisualizer:
         plt.show()
 
     def derivative_chain_rule_examples(self) -> None:
-        """Demonstrate chain rule with complex composite functions."""
+        '''Demonstrate chain rule with complex composite functions.'''
         examples = self.core.calculate_chain_rule_examples()
 
         print("\n=== Chain Rule Examples ===")
@@ -173,13 +173,13 @@ class CommonDerivativesVisualizer:
 
     def higher_order_derivatives(self, func_str: str = "x**4 - 4*x**3 + 6*x**2 - 4*x + 1",
                                 n_derivatives: int = 4) -> None:
-        """
+        '''
         Calculate and visualize higher-order derivatives.
 
         Args:
             func_str: Function to differentiate
             n_derivatives: Number of derivatives to calculate
-        """
+        '''
         derivatives = self.core.calculate_higher_order_derivatives(func_str, n_derivatives)
 
         # Create visualizations
@@ -226,12 +226,12 @@ class CommonDerivativesVisualizer:
             print(f"{order} = {deriv}")
 
     def critical_points_analysis(self, func_str: str = "x**3 - 3*x**2 + 2") -> None:
-        """
+        '''
         Find and analyze critical points using derivatives.
 
         Args:
             func_str: Function to analyze
-        """
+        '''
         analysis = self.core.find_critical_points(func_str)
 
         print(f"Function: f(x) = {analysis['function']}")
@@ -323,7 +323,7 @@ class CommonDerivativesVisualizer:
 
 
 def derivative_game():
-    """Interactive game for practicing derivatives."""
+    '''Interactive game for practicing derivatives.'''
 
     visualizer = CommonDerivativesVisualizer()
 
@@ -355,7 +355,7 @@ def derivative_game():
 
 # Convenience class that maintains the same interface as before
 class CommonDerivatives:
-    """Wrapper class that maintains the original interface."""
+    '''Wrapper class that maintains the original interface.'''
 
     def __init__(self):
         self.visualizer = CommonDerivativesVisualizer()

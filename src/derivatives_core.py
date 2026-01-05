@@ -16,7 +16,7 @@ from typing import Dict, List, Tuple, Callable
 
 
 class CommonDerivativesCore:
-    """Core class for derivative calculations and formulas."""
+    '''Core class for derivative calculations and formulas.'''
 
     def __init__(self):
         self.x = sp.Symbol('x')
@@ -58,7 +58,7 @@ class CommonDerivativesCore:
         }
 
     def calculate_function_and_derivative(self, func_str: str, x_vals: np.ndarray) -> Tuple[np.ndarray, np.ndarray, sp.Expr, sp.Expr]:
-        """
+        '''
         Calculate function values and derivative values.
 
         Args:
@@ -67,7 +67,7 @@ class CommonDerivativesCore:
 
         Returns:
             Tuple of (y_vals, dy_vals, func_expr, derivative_expr)
-        """
+        '''
         func = sp.sympify(func_str)
         derivative = sp.diff(func, self.x)
 
@@ -81,7 +81,7 @@ class CommonDerivativesCore:
             raise ValueError(f"Could not convert function to numpy: {func}")
 
     def get_derivative_patterns(self) -> Dict[str, List[str]]:
-        """Get common derivative patterns grouped by type."""
+        '''Get common derivative patterns grouped by type.'''
         return {
             "Power Functions": ["x**2", "x**3", "x**4", "x**0.5"],
             "Exponential Functions": ["exp(x)", "2**x", "exp(-x)"],
@@ -90,7 +90,7 @@ class CommonDerivativesCore:
         }
 
     def calculate_chain_rule_examples(self) -> List[Dict]:
-        """Calculate chain rule examples."""
+        '''Calculate chain rule examples.'''
         examples = [
             "sin(x**2)",
             "exp(cos(x))",
@@ -118,7 +118,7 @@ class CommonDerivativesCore:
         return results
 
     def calculate_higher_order_derivatives(self, func_str: str, n_derivatives: int = 4) -> List[sp.Expr]:
-        """
+        '''
         Calculate higher-order derivatives.
 
         Args:
@@ -127,7 +127,7 @@ class CommonDerivativesCore:
 
         Returns:
             List of derivative expressions
-        """
+        '''
         func = sp.sympify(func_str)
         derivatives = [func]
 
@@ -139,7 +139,7 @@ class CommonDerivativesCore:
         return derivatives
 
     def find_critical_points(self, func_str: str) -> Dict:
-        """
+        '''
         Find critical points of a function.
 
         Args:
@@ -147,7 +147,7 @@ class CommonDerivativesCore:
 
         Returns:
             Dictionary with critical points analysis
-        """
+        '''
         func = sp.sympify(func_str)
         first_derivative = sp.diff(func, self.x)
         second_derivative = sp.diff(first_derivative, self.x)
@@ -189,7 +189,7 @@ class CommonDerivativesCore:
 
     def calculate_slope_field_data(self, func_str: str, x_range: Tuple[float, float],
                                  y_range: Tuple[float, float], grid_size: Tuple[int, int] = (20, 15)) -> Dict:
-        """
+        '''
         Calculate slope field data for a derivative function.
 
         Args:
@@ -200,7 +200,7 @@ class CommonDerivativesCore:
 
         Returns:
             Dictionary with slope field data
-        """
+        '''
         func = sp.sympify(func_str)
         derivative = sp.diff(func, self.x)
 
@@ -251,7 +251,7 @@ class CommonDerivativesCore:
 
 
 def get_function_families() -> Dict[str, List[str]]:
-    """Get common function families for pattern analysis."""
+    '''Get common function families for pattern analysis.'''
     return {
         "Polynomial": ["x", "x**2", "x**3", "x**4", "x**5"],
         "Radical": ["sqrt(x)", "x**(1/3)", "x**(2/3)"],
@@ -264,7 +264,7 @@ def get_function_families() -> Dict[str, List[str]]:
 
 
 def format_derivative_table() -> str:
-    """Format the derivative formulas table as text."""
+    '''Format the derivative formulas table as text.'''
     core = CommonDerivativesCore()
 
     table = "COMMON DERIVATIVES REFERENCE TABLE\n"

@@ -18,7 +18,7 @@ warnings.filterwarnings('ignore')
 
 
 class CommonIntegralsCore:
-    """Core calculations for common integrals."""
+    '''Core calculations for common integrals.'''
 
     def __init__(self):
         self.x = sp.Symbol('x')
@@ -128,12 +128,12 @@ class CommonIntegralsCore:
         }
 
     def get_integral_table_data(self) -> Dict:
-        """Get integral formulas data without displaying."""
+        '''Get integral formulas data without displaying.'''
         return self.integral_formulas
 
     def calculate_integral_area(self, func_str: str, interval: Tuple[float, float] = (0, 2),
                                num_points: int = 1000) -> Dict:
-        """Calculate integral as area between function and x-axis."""
+        '''Calculate integral as area between function and x-axis.'''
         try:
             # Parse the function
             x_sym = sp.Symbol('x')
@@ -180,7 +180,7 @@ class CommonIntegralsCore:
             return None
 
     def compare_integration_methods_calc(self, func_str: str, interval: Tuple[float, float] = (0, 2)) -> Dict:
-        """Calculate integrals using different methods for comparison."""
+        '''Calculate integrals using different methods for comparison.'''
         try:
             x_sym = sp.Symbol('x')
             func = sp.sympify(func_str)
@@ -235,7 +235,7 @@ class CommonIntegralsCore:
             return None
 
     def integration_by_parts_calc(self, u_str: str = "x", dv_str: str = "exp(x)") -> Dict:
-        """Calculate integration by parts: ∫u dv = uv - ∫v du."""
+        '''Calculate integration by parts: ∫u dv = uv - ∫v du.'''
         try:
             x_sym = sp.Symbol('x')
             u = sp.sympify(u_str)
@@ -278,7 +278,7 @@ class CommonIntegralsCore:
 
     def substitution_method_calc(self, func_str: str = "2*x*exp(x**2)",
                                 substitution: str = "u = x**2") -> Dict:
-        """Calculate integral using substitution method."""
+        '''Calculate integral using substitution method.'''
         try:
             x_sym = sp.Symbol('x')
             u_sym = sp.Symbol('u')
@@ -327,7 +327,7 @@ class CommonIntegralsCore:
 
     def calculate_area_between_curves(self, func1_str: str = "x**2", func2_str: str = "x + 2",
                                      interval: Optional[Tuple[float, float]] = None) -> Dict:
-        """Calculate area between two curves."""
+        '''Calculate area between two curves.'''
         try:
             x_sym = sp.Symbol('x')
             func1 = sp.sympify(func1_str)
@@ -409,7 +409,7 @@ class CommonIntegralsCore:
     def calculate_volume_of_revolution(self, func_str: str = "sqrt(x)",
                                       interval: Tuple[float, float] = (0, 4),
                                       method: str = "disk", axis: str = "x") -> Dict:
-        """Calculate volume of revolution using disk/washer method."""
+        '''Calculate volume of revolution using disk/washer method.'''
         try:
             x_sym = sp.Symbol('x')
             func = sp.sympify(func_str)
@@ -465,7 +465,7 @@ class CommonIntegralsCore:
             return None
 
     def generate_practice_problem(self) -> Dict:
-        """Generate a random integration practice problem."""
+        '''Generate a random integration practice problem.'''
         import random
 
         # Select a random integral type

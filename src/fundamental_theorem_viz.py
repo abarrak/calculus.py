@@ -19,21 +19,21 @@ from fundamental_theorem_core import FundamentalTheoremCore, compare_integration
 
 
 class FundamentalTheoremVisualizer:
-    """Handles all visualizations for FTC demonstrations."""
+    '''Handles all visualizations for FTC demonstrations.'''
 
     def __init__(self):
         self.core = FundamentalTheoremCore()
 
     def riemann_sum_visualization(self, func_str: str = "x**2", interval: Tuple[float, float] = (0, 2),
                                   n_rectangles: int = 10) -> None:
-        """
+        '''
         Visualize Riemann sums approximating definite integrals.
 
         Args:
             func_str: Function to integrate as string
             interval: Integration interval (a, b)
             n_rectangles: Number of rectangles for approximation
-        """
+        '''
         data = self.core.calculate_riemann_sum(func_str, interval, n_rectangles)
         conv_data = self.core.calculate_riemann_convergence(func_str, interval)
 
@@ -85,13 +85,13 @@ class FundamentalTheoremVisualizer:
             print(f"Error: {abs(data['riemann_sum'] - data['exact_integral']):.6f}")
 
     def fundamental_theorem_part1_demo(self, func_str: str = "2*x", lower_bound: float = 0) -> None:
-        """
+        '''
         Demonstrate FTC Part 1: If F(x) = ∫[a to x] f(t) dt, then F'(x) = f(x)
 
         Args:
             func_str: Integrand function as string
             lower_bound: Lower bound of integration
-        """
+        '''
         data = self.core.calculate_ftc_part1_data(func_str, lower_bound)
 
         # Create function for plotting original f(t) using sympy lambdify
@@ -142,13 +142,13 @@ class FundamentalTheoremVisualizer:
         print(f"Average error between f(x) and numerical F'(x): {data['error']:.8f}")
 
     def fundamental_theorem_part2_demo(self, func_str: str = "x**2", interval: Tuple[float, float] = (0, 2)) -> None:
-        """
+        '''
         Demonstrate FTC Part 2: ∫[a to b] f(x) dx = F(b) - F(a) where F'(x) = f(x)
 
         Args:
             func_str: Function to integrate
             interval: Integration bounds (a, b)
-        """
+        '''
         data = self.core.calculate_ftc_part2_data(func_str, interval)
         a, b = interval
 
@@ -210,13 +210,13 @@ class FundamentalTheoremVisualizer:
 
     def mean_value_theorem_demo(self, func_str: str = "x**3 - 3*x**2 + 2*x",
                                interval: Tuple[float, float] = (0, 3)) -> None:
-        """
+        '''
         Demonstrate the Mean Value Theorem for integrals.
 
         Args:
             func_str: Function to analyze
             interval: Interval [a, b]
-        """
+        '''
         data = self.core.calculate_mean_value_theorem_data(func_str, interval)
         a, b = interval
 
@@ -264,13 +264,13 @@ class FundamentalTheoremVisualizer:
 
     def net_change_theorem_demo(self, rate_func_str: str = "2*x + 1",
                                interval: Tuple[float, float] = (0, 3)) -> None:
-        """
+        '''
         Demonstrate the Net Change Theorem: ∫[a to b] f'(x) dx = f(b) - f(a)
 
         Args:
             rate_func_str: Rate of change function f'(x)
             interval: Time interval [a, b]
-        """
+        '''
         data = self.core.calculate_net_change_data(rate_func_str, interval)
 
         if not data['symbolic_success']:
@@ -329,13 +329,13 @@ class FundamentalTheoremVisualizer:
         print(f"Error: {data['error']:.8f}")
 
     def compare_integration_methods(self, func_str: str, interval: Tuple[float, float] = (0, 2)) -> None:
-        """
+        '''
         Compare different numerical integration methods.
 
         Args:
             func_str: Function to integrate
             interval: Integration bounds
-        """
+        '''
         data = compare_integration_methods_data(func_str, interval)
 
         plt.figure(figsize=(15, 10))
@@ -360,7 +360,7 @@ class FundamentalTheoremVisualizer:
 
 
 def interactive_fundamental_theorem_explorer():
-    """Interactive exploration of FTC concepts."""
+    '''Interactive exploration of FTC concepts.'''
     print("=== Interactive FTC Explorer ===")
     print("Exploring different functions and their properties under FTC")
 
@@ -393,7 +393,7 @@ def interactive_fundamental_theorem_explorer():
 
 # Convenience class that maintains the same interface as before
 class FundamentalTheorem:
-    """Wrapper class that maintains the original interface."""
+    '''Wrapper class that maintains the original interface.'''
 
     def __init__(self):
         self.visualizer = FundamentalTheoremVisualizer()

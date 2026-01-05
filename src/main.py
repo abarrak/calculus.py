@@ -21,7 +21,7 @@ from integrals_viz import CommonIntegralsVisualizer, integral_practice_game
 
 
 class CalculusToolkit:
-    """Main class for the Calculus Learning Toolkit."""
+    '''Main class for the Calculus Learning Toolkit.'''
 
     def __init__(self):
         self.rules = CalculusRules()
@@ -36,7 +36,7 @@ class CalculusToolkit:
         plt.rcParams['grid.alpha'] = 0.3
 
     def display_main_menu(self):
-        """Display the main menu for the toolkit."""
+        '''Display the main menu for the toolkit.'''
         print("\n" + "="*60)
         print("🧮 CALCULUS LEARNING & VISUALIZATION TOOLKIT 🧮")
         print("="*60)
@@ -82,7 +82,7 @@ class CalculusToolkit:
         print("="*60)
 
     def run_demo(self, choice: int):
-        """Run the selected demonstration."""
+        '''Run the selected demonstration.'''
         try:
             if choice == 1:
                 print("\n📏 Power Rule Demonstration")
@@ -196,7 +196,7 @@ class CalculusToolkit:
             print("Please try again or choose a different option.")
 
     def custom_function_explorer(self):
-        """Allow users to explore custom functions."""
+        '''Allow users to explore custom functions.'''
         print("\n🎮 Custom Function Explorer")
         print("Explore derivatives and integrals of your own functions!")
         print("Enter functions using Python/SymPy syntax:")
@@ -238,7 +238,7 @@ class CalculusToolkit:
                 print("Please check your function syntax and try again.")
 
     def run(self):
-        """Main application loop."""
+        '''Main application loop.'''
         print("\n🎓 Welcome to the Calculus Learning Toolkit!")
         print("This toolkit provides interactive visualizations and")
         print("demonstrations of key calculus concepts.")
@@ -276,7 +276,7 @@ class CalculusToolkit:
 
 
 def main():
-    """Main entry point for the application."""
+    '''Main entry point for the application.'''
     try:
         toolkit = CalculusToolkit()
         toolkit.run()

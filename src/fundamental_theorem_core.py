@@ -16,7 +16,7 @@ from typing import Tuple, Dict, Optional
 
 
 class FundamentalTheoremCore:
-    """Core class for FTC calculations."""
+    '''Core class for FTC calculations.'''
 
     def __init__(self):
         self.x = sp.Symbol('x')
@@ -24,7 +24,7 @@ class FundamentalTheoremCore:
 
     def calculate_riemann_sum(self, func_str: str, interval: Tuple[float, float],
                              n_rectangles: int, method: str = "right") -> Dict:
-        """
+        '''
         Calculate Riemann sum approximation.
 
         Args:
@@ -35,7 +35,7 @@ class FundamentalTheoremCore:
 
         Returns:
             Dictionary with Riemann sum data
-        """
+        '''
         func = sp.sympify(func_str)
         func_numpy = sp.lambdify(self.x, func, 'numpy')
 
@@ -77,7 +77,7 @@ class FundamentalTheoremCore:
 
     def calculate_riemann_convergence(self, func_str: str, interval: Tuple[float, float],
                                     max_n: int = 100) -> Dict:
-        """
+        '''
         Calculate convergence of Riemann sums.
 
         Args:
@@ -87,7 +87,7 @@ class FundamentalTheoremCore:
 
         Returns:
             Dictionary with convergence data
-        """
+        '''
         func = sp.sympify(func_str)
         func_numpy = sp.lambdify(self.x, func, 'numpy')
         a, b = interval
@@ -116,7 +116,7 @@ class FundamentalTheoremCore:
 
     def calculate_ftc_part1_data(self, func_str: str, lower_bound: float,
                                 upper_range: Tuple[float, float] = (0, 5)) -> Dict:
-        """
+        '''
         Calculate data for FTC Part 1: If F(x) = ∫[a to x] f(t) dt, then F'(x) = f(x)
 
         Args:
@@ -126,7 +126,7 @@ class FundamentalTheoremCore:
 
         Returns:
             Dictionary with FTC Part 1 data
-        """
+        '''
         func = sp.sympify(func_str)
         # Replace any 'x' symbols with 't' symbols for proper integration variable
         if 'x' in func_str:
@@ -171,7 +171,7 @@ class FundamentalTheoremCore:
         }
 
     def calculate_ftc_part2_data(self, func_str: str, interval: Tuple[float, float]) -> Dict:
-        """
+        '''
         Calculate data for FTC Part 2: ∫[a to b] f(x) dx = F(b) - F(a)
 
         Args:
@@ -180,7 +180,7 @@ class FundamentalTheoremCore:
 
         Returns:
             Dictionary with FTC Part 2 data
-        """
+        '''
         func = sp.sympify(func_str)
         a, b = interval
 
@@ -213,7 +213,7 @@ class FundamentalTheoremCore:
         }
 
     def calculate_mean_value_theorem_data(self, func_str: str, interval: Tuple[float, float]) -> Dict:
-        """
+        '''
         Calculate data for Mean Value Theorem for integrals.
 
         Args:
@@ -222,7 +222,7 @@ class FundamentalTheoremCore:
 
         Returns:
             Dictionary with MVT data
-        """
+        '''
         func_numpy = sp.lambdify(self.x, sp.sympify(func_str), 'numpy')
         a, b = interval
 
@@ -252,7 +252,7 @@ class FundamentalTheoremCore:
         }
 
     def calculate_net_change_data(self, rate_func_str: str, interval: Tuple[float, float]) -> Dict:
-        """
+        '''
         Calculate data for Net Change Theorem: ∫[a to b] f'(x) dx = f(b) - f(a)
 
         Args:
@@ -261,7 +261,7 @@ class FundamentalTheoremCore:
 
         Returns:
             Dictionary with net change data
-        """
+        '''
         rate_func = sp.sympify(rate_func_str)
         a, b = interval
 
@@ -297,7 +297,7 @@ class FundamentalTheoremCore:
 
 def compare_integration_methods_data(func_str: str, interval: Tuple[float, float] = (0, 2),
                                    n_values: Optional[list] = None) -> Dict:
-    """
+    '''
     Compare different numerical integration methods.
 
     Args:
@@ -307,7 +307,7 @@ def compare_integration_methods_data(func_str: str, interval: Tuple[float, float
 
     Returns:
         Dictionary with method comparison data
-    """
+    '''
     if n_values is None:
         n_values = [5, 10, 20, 50, 100, 200]
 
