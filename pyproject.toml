@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "calculus.py"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   {name = "Abdullah Barrak", email = "abdullah@example.com"},
   {name = "Claude Sonnet 4"}
@@ -65,7 +65,7 @@ calculus = "calculus_py.main:main"
 where = ["src"]
 
 [tool.setuptools.package-dir]
-"" = "src"
+"calculus_py" = "src"
 
 [tool.black]
 line-length = 88
