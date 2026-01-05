@@ -14,34 +14,40 @@ function clean() {
 
 function test() {
     echo "🧪 Running tests..."
-    python -m pytest test/ -v
+    echo "📦 Installing test dependencies..."
+    pip install pytest
+    python3 -m pytest test/ -v
     echo "✅ Tests complete!"
 }
 
 function lint() {
     echo "🔍 Running linting..."
-    python -m flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
-    python -m black --check src/
+    echo "📦 Installing linting dependencies..."
+    pip install flake8 black
+    python3 -m flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+    python3 -m black --check src/
     echo "✅ Linting complete!"
 }
 
 function build() {
     echo "🔨 Building package..."
+    echo "📦 Installing build dependencies..."
+    pip install --upgrade pip build twine
     clean
-    python -m build
-    python -m twine check dist/*
+    python3 -m build
+    python3 -m twine check dist/*
     echo "✅ Build complete!"
 }
 
 function upload_test() {
     echo "📦 Uploading to Test PyPI..."
-    python -m twine upload --repository testpypi dist/*
+    python3 -m twine upload --repository testpypi dist/*
     echo "✅ Upload to Test PyPI complete!"
 }
 
 function upload() {
     echo "📦 Uploading to PyPI..."
-    python -m twine upload dist/*
+    python3 -m twine upload dist/*
     echo "✅ Upload to PyPI complete!"
 }
 
