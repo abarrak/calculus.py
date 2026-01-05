@@ -17,8 +17,11 @@ A comprehensive Python toolkit for learning and visualizing single-variable calc
 
 ```bash
 pip install calculus-learn-kit
+```
 
-# Run it.
+Then run it.
+
+```bash
 calculus
 ```
 

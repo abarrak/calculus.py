@@ -14,7 +14,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from typing import Tuple
-from basic_rules_core import CalculusRulesCore, create_x_range
+
+try:
+  from .basic_rules_core import CalculusRulesCore, create_x_range
+except ImportError:
+  from basic_rules_core import CalculusRulesCore, create_x_range
 
 
 class CalculusRulesVisualizer:

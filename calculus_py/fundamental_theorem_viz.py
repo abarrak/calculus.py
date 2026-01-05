@@ -15,7 +15,10 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import sympy as sp
 from typing import Tuple
-from fundamental_theorem_core import FundamentalTheoremCore, compare_integration_methods_data
+try:
+    from .fundamental_theorem_core import FundamentalTheoremCore, compare_integration_methods_data
+except ImportError:
+    from fundamental_theorem_core import FundamentalTheoremCore, compare_integration_methods_data
 
 
 class FundamentalTheoremVisualizer:

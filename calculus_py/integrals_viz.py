@@ -14,7 +14,10 @@ import matplotlib.pyplot as plt
 import sympy as sp
 from typing import Dict, List, Tuple, Optional
 import matplotlib.patches as patches
-from integrals_core import CommonIntegralsCore
+try:
+    from .integrals_core import CommonIntegralsCore
+except ImportError:
+    from integrals_core import CommonIntegralsCore
 import random
 
 

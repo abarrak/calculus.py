@@ -62,10 +62,8 @@ jupyter = [
 calculus = "calculus_py.main:main"
 
 [tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-dir]
-"calculus_py" = "src"
+where = ["."]
+include = ["calculus_py*"]
 
 [tool.black]
 line-length = 88

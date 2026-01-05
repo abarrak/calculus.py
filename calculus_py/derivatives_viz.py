@@ -16,7 +16,10 @@ import matplotlib.patches as mpatches
 import sympy as sp
 from mpl_toolkits.mplot3d import Axes3D
 from typing import Tuple
-from derivatives_core import CommonDerivativesCore, get_function_families, format_derivative_table
+try:
+    from .derivatives_core import CommonDerivativesCore, get_function_families, format_derivative_table
+except ImportError:
+    from derivatives_core import CommonDerivativesCore, get_function_families, format_derivative_table
 
 
 class CommonDerivativesVisualizer:
