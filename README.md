@@ -1,5 +1,11 @@
 # Calculus.py
 
+![Tests](https://github.com/abarrak/calculus.py/workflows/Tests/badge.svg)
+[![PyPI version](https://badge.fury.io/py/calculus-learn-kit.svg)](https://badge.fury.io/py/calculus-learn-kit)
+[![Python versions](https://img.shields.io/pypi/pyversions/calculus-learn-kit.svg)](https://pypi.org/project/calculus-learn-kit/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://pepy.tech/badge/calculus-learn-kit)](https://pepy.tech/project/calculus-learn-kit)
+
 A comprehensive Python toolkit for learning and visualizing single-variable calculus concepts through interactive demonstrations.
 
 ## ✨ Features
