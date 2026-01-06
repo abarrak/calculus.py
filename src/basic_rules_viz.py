@@ -208,7 +208,7 @@ class CalculusRulesVisualizer:
 
 
 class CalculusRules:
-  """Wrapper class that maintains the original interface for convenience."""
+  '''Wrapper class that maintains the original interface for convenience.'''
 
   def __init__(self):
     self.visualizer = CalculusRulesVisualizer()

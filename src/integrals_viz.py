@@ -1,4 +1,4 @@
-"""
+'''
 ' Common Integrals Visualization Module
 ' -------------------------------------
 '
@@ -7,7 +7,7 @@
 ' @file: integrals_viz.py
 ' @authors: Claude Sonnet 4, Abdullah Barrak.
 ' @date: 1/1/2026
-"""
+'''
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,18 +22,18 @@ import random
 
 
 class CommonIntegralsVisualizer:
-  """Visualization for common integrals."""
+  '''Visualization for common integrals.'''
 
   def __init__(self):
     self.core = CommonIntegralsCore()
 
   @property
   def integral_formulas(self):
-    """Access to integral formulas from the core module."""
+    '''Access to integral formulas from the core module.'''
     return self.core.integral_formulas
 
   def display_integral_table(self) -> None:
-    """Display a comprehensive table of common integral formulas."""
+    '''Display a comprehensive table of common integral formulas.'''
     formulas = self.core.get_integral_table_data()
 
     print("\n" + "=" * 80)
@@ -54,7 +54,7 @@ class CommonIntegralsVisualizer:
     interval: Tuple[float, float] = (0, 2),
     num_points: int = 1000,
   ) -> None:
-    """Visualize an integral as the area under a curve."""
+    '''Visualize an integral as the area under a curve.'''
     data = self.core.calculate_integral_area(func_str, interval, num_points)
 
     if data is None:
@@ -108,7 +108,7 @@ class CommonIntegralsVisualizer:
   def compare_integration_methods(
     self, func_str: str, interval: Tuple[float, float] = (0, 2)
   ) -> None:
-    """Compare different numerical integration methods."""
+    '''Compare different numerical integration methods.'''
     data = self.core.compare_integration_methods_calc(func_str, interval)
 
     if data is None:
@@ -199,7 +199,7 @@ class CommonIntegralsVisualizer:
   def integration_by_parts_demo(
     self, u_str: str = "x", dv_str: str = "exp(x)"
   ) -> None:
-    """Demonstrate integration by parts step by step."""
+    '''Demonstrate integration by parts step by step.'''
     data = self.core.integration_by_parts_calc(u_str, dv_str)
 
     if data is None:
@@ -305,7 +305,7 @@ class CommonIntegralsVisualizer:
   def substitution_method_demo(
     self, func_str: str = "2*x*exp(x**2)", substitution: str = "u = x**2"
   ) -> None:
-    """Demonstrate the substitution method for integration."""
+    '''Demonstrate the substitution method for integration.'''
     data = self.core.substitution_method_calc(func_str, substitution)
 
     if data is None:
@@ -418,7 +418,7 @@ class CommonIntegralsVisualizer:
     func2_str: str = "x + 2",
     interval: Optional[Tuple[float, float]] = None,
   ) -> None:
-    """Visualize and calculate area between two curves."""
+    '''Visualize and calculate area between two curves.'''
     data = self.core.calculate_area_between_curves(func1_str, func2_str, interval)
 
     if data is None:
@@ -494,7 +494,7 @@ class CommonIntegralsVisualizer:
       print(f"     = {data['exact_area']:.6f}")
 
   def improper_integrals_demo(self) -> None:
-    """Demonstrate improper integrals with examples and visualizations."""
+    '''Demonstrate improper integrals with examples and visualizations.'''
     print("\n" + "=" * 60)
     print("∫ IMPROPER INTEGRALS DEMONSTRATION")
     print("=" * 60)
@@ -651,7 +651,7 @@ class CommonIntegralsVisualizer:
     method: str = "disk",
     axis: str = "x",
   ) -> None:
-    """Visualize volume of revolution using disk/washer method."""
+    '''Visualize volume of revolution using disk/washer method.'''
     data = self.core.calculate_volume_of_revolution(
       func_str, interval, method, axis
     )
@@ -784,7 +784,7 @@ CommonIntegrals = CommonIntegralsVisualizer
 
 
 def integral_practice_game():
-  """Interactive integral practice game."""
+  '''Interactive integral practice game.'''
   core = CommonIntegralsCore()
 
   print("\n" + "=" * 60)

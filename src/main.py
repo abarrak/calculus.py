@@ -1,4 +1,4 @@
-"""
+'''
 ' Calculus Learning and Visualization Toolkit
 ' -------------------------------------------
 '
@@ -8,7 +8,7 @@
 ' @file: main.py
 ' @authors: Claude Sonnet 4, Abdullah Barrak.
 ' @date: 1/1/2026
-"""
+'''
 
 import matplotlib.pyplot as plt
 
@@ -34,7 +34,7 @@ except ImportError:
 
 
 class CalculusToolkit:
-  """Main class for the Calculus Learning Toolkit."""
+  '''Main class for the Calculus Learning Toolkit.'''
 
   def __init__(self):
     self.rules = CalculusRules()
@@ -49,53 +49,56 @@ class CalculusToolkit:
     plt.rcParams["grid.alpha"] = 0.3
 
   def display_main_menu(self):
-    """Display the main menu for the toolkit."""
-    print("\n" + "=" * 60)
-    print("🧮 CALCULUS LEARNING & VISUALIZATION TOOLKIT 🧮")
-    print("=" * 60)
-    print("Select a topic to explore:")
-    print()
-    print("📏 BASIC RULES & CONCEPTS")
-    print("  1. Power Rule Demonstration")
-    print("  2. Product Rule Visualization")
-    print("  3. Chain Rule Examples")
-    print("  4. Quotient Rule Demo")
-    print("  5. Limits and Continuity")
-    print()
-    print("🔄 FUNDAMENTAL THEOREM OF CALCULUS")
-    print("  6. Riemann Sums & Area Approximation")
-    print("  7. Fundamental Theorem Part 1: Derivative of Integral")
-    print("  8. Fundamental Theorem Part 2: Evaluating Definite Integrals")
-    print("  9. Mean Value Theorem")
-    print("  10. Net Change Theorem")
-    print()
-    print("📊 DERIVATIVES LIBRARY")
-    print("  11. Common Derivatives Table")
-    print("  12. Derivative Patterns & Examples")
-    print("  13. Critical Points Analysis")
-    print("  14. Higher Order Derivatives")
-    print("  15. Slope Fields Visualization")
-    print()
-    print("∫ INTEGRALS LIBRARY")
-    print("  16. Common Integrals Table")
-    print("  17. Area Under Curves")
-    print("  18. Integration by Parts")
-    print("  19. U-Substitution Method")
-    print("  20. Improper Integrals")
-    print("  21. Area Between Curves")
-    print("  22. Volumes of Revolution")
-    print()
-    print("🎮 INTERACTIVE LEARNING")
-    print("  23. Derivative Practice Game")
-    print("  24. Integral Practice Game")
-    print("  25. Complete Fundamental Theorem Explorer")
-    print("  26. Custom Function Explorer")
-    print()
-    print("  0. Exit")
-    print("=" * 60)
+    '''Display the main menu for the toolkit.'''
+    menu_content = '''
+    ============================================================
+    🧮 CALCULUS LEARNING & VISUALIZATION TOOLKIT 🧮
+    ============================================================
+    Select a topic to explore:
+
+    📏 BASIC RULES & CONCEPTS
+      1. Power Rule Demonstration
+      2. Product Rule Visualization
+      3. Chain Rule Examples
+      4. Quotient Rule Demo
+      5. Limits and Continuity
+
+    🔄 FUNDAMENTAL THEOREM OF CALCULUS
+      6. Riemann Sums & Area Approximation
+      7. Fundamental Theorem Part 1: Derivative of Integral
+      8. Fundamental Theorem Part 2: Evaluating Definite Integrals
+      9. Mean Value Theorem
+      10. Net Change Theorem
+
+    📊 DERIVATIVES LIBRARY
+      11. Common Derivatives Table
+      12. Derivative Patterns & Examples
+      13. Critical Points Analysis
+      14. Higher Order Derivatives
+      15. Slope Fields Visualization
+
+    ∫ INTEGRALS LIBRARY
+      16. Common Integrals Table
+      17. Area Under Curves
+      18. Integration by Parts
+      19. U-Substitution Method
+      20. Improper Integrals
+      21. Area Between Curves
+      22. Volumes of Revolution
+
+    🎮 INTERACTIVE LEARNING
+      23. Derivative Practice Game
+      24. Integral Practice Game
+      25. Complete Fundamental Theorem Explorer
+      26. Custom Function Explorer
+
+      0. Exit
+    ============================================================
+    '''
+    print(menu_content)
 
   def run_demo(self, choice: int):
-    """Run the selected demonstration."""
+    '''Run the selected demonstration.'''
 
     try:
       if choice == 1:
@@ -212,12 +215,12 @@ class CalculusToolkit:
       print("Please try again or choose a different option.")
 
   def custom_function_explorer(self):
-    """Allow users to explore custom functions."""
+    '''Allow users to explore custom functions.'''
+
     print("\n🎮 Custom Function Explorer")
     print("Explore derivatives and integrals of your own functions!")
     print("Enter functions using Python/SymPy syntax:")
-    print("Examples: x**2, sin(x), exp(x), log(x), sqrt(x), etc.")
-    print()
+    print("Examples: x**2, sin(x), exp(x), log(x), sqrt(x), etc.\n")
 
     while True:
       try:
@@ -254,10 +257,13 @@ class CalculusToolkit:
         print("Please check your function syntax and try again.")
 
   def run(self):
-    """Main application loop."""
-    print("\n🎓 Welcome to the Calculus Learning Toolkit!")
-    print("This toolkit provides interactive visualizations and")
-    print("demonstrations of key calculus concepts.")
+    '''Main application loop.'''
+    welcome_message = '''
+      🎓 Welcome to the Calculus Learning Toolkit!
+      This toolkit provides interactive visualizations and
+      demonstrations of key calculus concepts.
+    '''
+    print(welcome_message)
 
     while True:
       try:
@@ -271,8 +277,11 @@ class CalculusToolkit:
         choice = int(choice)
 
         if choice == 0:
-          print("\n👋 Thank you for using the Calculus Learning Toolkit!")
-          print("Keep exploring and learning calculus! 📚")
+          farewell_message = '''
+            👋 Thank you for using the Calculus Learning Toolkit!
+            Keep exploring and learning calculus! 📚
+          '''
+          print(farewell_message)
           break
 
         if 1 <= choice <= 26:
@@ -291,7 +300,8 @@ class CalculusToolkit:
         print("Please try again.")
 
 def main():
-  """Main entry point for the application."""
+  '''Main entry point for the application.'''
+
   try:
     toolkit = CalculusToolkit()
     toolkit.run()
