@@ -13,7 +13,6 @@ import sympy as sp
 
 # Set matplotlib to non-interactive backend before importing pyplot
 import matplotlib
-matplotlib.use('Agg')  # Use non-interactive backend for testing
 import matplotlib.pyplot as plt
 
 # Add src directory to path for imports
@@ -29,6 +28,8 @@ from basic_rules_core import CalculusRulesCore
 from derivatives_core import CommonDerivativesCore
 from fundamental_theorem_core import FundamentalTheoremCore
 
+# Use non-interactive backend for testing.
+matplotlib.use('Agg')
 
 class TestBasicRules(unittest.TestCase):
   '''Test basic calculus rules.'''

@@ -76,3 +76,7 @@ per-file-ignores = [
 [tool.pytest.ini_options]
 testpaths = ["test"]
 python_files = ["*_test.py", "test_*.py"]
+filterwarnings = [
+    "ignore:.*non-interactive.*:UserWarning",
+    "ignore:.*FigureCanvasAgg.*:UserWarning"
+]
