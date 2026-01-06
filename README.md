@@ -90,6 +90,21 @@ python -m pytest test/ -v
 
 <img src="https://raw.githubusercontent.com/abarrak/calculus.py/refs/heads/main/pictures/test-suite.png" width="70%">
 
+## 🐳 Docker
+
+Run with interactive matplotlib plots using Docker/nerdctl:
+
+```bash
+# Build the container
+nerdctl build -t calculus-learn-kit .
+
+# Run with X11 forwarding for interactive plots.
+nerdctl run --rm -it \
+  -e DISPLAY=:0 \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  calculus-learn-kit
+```
+
 ## 📚 Educational Use
 
 - **Students**: Visual learning with step-by-step demonstrations
