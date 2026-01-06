@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "calculus-learn-kit"
 version = "1.0.3"
 authors = [
-  {name = "Abdullah Barrak", email = "abdullah@example.com"},
+  {name = "Abdullah Barrak"},
   {name = "Claude Sonnet 4"}
 ]
 description = "A comprehensive toolkit for learning and visualizing calculus concepts"
