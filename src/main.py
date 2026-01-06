@@ -17,8 +17,8 @@ try:
   # Try relative imports first (when used as package)
   from .basic_rules_viz import CalculusRules
   from .fundamental_theorem_viz import (
-      FundamentalTheorem,
-      interactive_fundamental_theorem_explorer,
+    FundamentalTheorem,
+    interactive_fundamental_theorem_explorer,
   )
   from .derivatives_viz import CommonDerivatives, derivative_game
   from .integrals_viz import CommonIntegralsVisualizer, integral_practice_game
@@ -26,8 +26,8 @@ except ImportError:
   # Fall back to direct imports (when run as script)
   from basic_rules_viz import CalculusRules
   from fundamental_theorem_viz import (
-      FundamentalTheorem,
-      interactive_fundamental_theorem_explorer,
+    FundamentalTheorem,
+    interactive_fundamental_theorem_explorer,
   )
   from derivatives_viz import CommonDerivatives, derivative_game
   from integrals_viz import CommonIntegralsVisualizer, integral_practice_game
@@ -133,7 +133,7 @@ class CalculusToolkit:
       elif choice == 9:
         print("\n🔄 Mean Value Theorem")
         self.fundamental_theorem.mean_value_theorem_demo(
-            "x**3 - 3*x**2 + 2*x", (0, 3)
+          "x**3 - 3*x**2 + 2*x", (0, 3)
         )
 
       elif choice == 10:
