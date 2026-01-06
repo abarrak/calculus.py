@@ -10,6 +10,10 @@ import sys
 import os
 import numpy as np
 import sympy as sp
+
+# Set matplotlib to non-interactive backend before importing pyplot
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend for testing
 import matplotlib.pyplot as plt
 
 # Add src directory to path for imports
