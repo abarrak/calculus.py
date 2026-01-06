@@ -12,7 +12,7 @@ This package provides interactive demonstrations and visualizations for:
 @license: MIT
 '''
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 __author__ = "Abdullah Barrak, Claude Sonnet 4"
 __license__ = "MIT"
 
